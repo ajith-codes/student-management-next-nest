@@ -1,12 +1,14 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <>
       <div className="flex justify-between items-center p-4">
         <p>&copy; 2025 Student Management System. All rights reserved.</p>
         <div className="flex space-x-4">
-          <a href="/about" className="text-sm hover:underline">
+         <Link href="/about" className="text-sm hover:underline">
             About
-          </a>
+          </Link>
           <a href="/contact" className="text-sm hover:underline">
             Contact
           </a>
