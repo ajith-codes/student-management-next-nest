@@ -27,17 +27,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    
     <html lang="en">
-      <head />
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      <StoreProvider>
-        <ReactQueryProvider>
-          <Header />
-          {children}
-          <Footer />
-        </ReactQueryProvider>
-      </StoreProvider>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+      >
+        <StoreProvider>
+          <ReactQueryProvider>
+            {/* HEADER (static, not fixed) */}
+            <Header />
+
+            {/* MAIN CONTENT with top padding */}
+            <main className="flex-1 px-8 py-8">
+              {children}
+            </main>
+
+            {/* FOOTER */}
+            <Footer />
+          </ReactQueryProvider>
+        </StoreProvider>
       </body>
     </html>
   );

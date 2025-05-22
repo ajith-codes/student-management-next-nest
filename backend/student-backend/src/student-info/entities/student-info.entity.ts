@@ -6,11 +6,23 @@ export class StudentInfo {
   _id: ObjectId;
 
   @Column()
-  name: string;
+  full_name: string;
+
+  @Column()
+  roll_number: number;
+
+  @Column()
+  class_name: string;
+
+  @Column()
+  age: number;
+
+  @Column()
+  contact_number: string;
 
   @Column()
   email: string;
 
   @Column()
-  age: number;
+  registered_at: Date;
 }
